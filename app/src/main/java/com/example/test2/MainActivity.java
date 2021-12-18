@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 //                stopService(new Intent(getApplication(), autobot_background.class));
             }
         });
-
     }
 }
 
