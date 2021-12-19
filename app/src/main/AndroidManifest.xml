@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.test2">
+
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACCOUNTS"
+        android:maxSdkVersion="22" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET" />
-<!--    <uses-permission android:name="android.permission.DUMP" />-->
-<!--    <uses-library android:required="false" android:name="com.sec.android.app.multiwindow"> </uses-library>-->
 
     <uses-permission android:name="android.permission.READ_CALENDAR"></uses-permission>
     <uses-permission android:name="android.permission.WRITE_CALENDAR"></uses-permission>

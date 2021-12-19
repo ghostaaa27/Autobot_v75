@@ -3,6 +3,9 @@ package com.example.test2;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.accounts.AuthenticatorDescription;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.net.Uri;
@@ -42,5 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }
 
