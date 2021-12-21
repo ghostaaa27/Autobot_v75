@@ -53,7 +53,7 @@ public class autobot_background extends Service {
                     Play_Service_Clear();
                     Thread.sleep(delay);
                     wifi_on();
-                    Thread.sleep(18000);
+                    Thread.sleep(10000);
                     Google_Account_Create();
                     Thread.sleep(delay);
                     wifi_off();
@@ -193,9 +193,9 @@ public class autobot_background extends Service {
             os.writeBytes(cmd);
             Thread.sleep(10000);
             //month
-            cmd = "/system/bin/input tap 136 404\n";
+            cmd = "/system/bin/input tap 90 408\n";
             os.writeBytes(cmd);
-            Thread.sleep(300);
+            Thread.sleep(700);
 
             cmd = "/system/bin/input tap 251 288\n";
             os.writeBytes(cmd);
