@@ -163,7 +163,7 @@ public class autobot_background extends Service {
             //google
             cmd = "/system/bin/input tap 248 246\n";
             os.writeBytes(cmd);
-            Thread.sleep(30000);
+            Thread.sleep(50000);
             //create acc
             cmd = "/system/bin/input tap 113 704\n";
             os.writeBytes(cmd);
@@ -296,7 +296,7 @@ public class autobot_background extends Service {
             //i_agree
             cmd = "/system/bin/input tap 368 698\n";
             os.writeBytes(cmd);
-            Thread.sleep(45000);
+            Thread.sleep(40000);
 
             //drive_backup_off
             cmd = "/system/bin/input swipe 269 638 243 295 500\n";
