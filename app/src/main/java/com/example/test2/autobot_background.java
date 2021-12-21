@@ -38,9 +38,9 @@ public class autobot_background extends Service {
                 os = new DataOutputStream(process.getOutputStream());
 
 
-                for(int i=0;i<10;i++){
-                    Thread.sleep(delay);
-                    All_Clear();
+                for(int i=0;i<1000000;i++){
+//                    Thread.sleep(delay);
+//                    All_Clear();
                     Thread.sleep(1000);
                     wifi_off();
                     Thread.sleep(1000);
@@ -53,7 +53,7 @@ public class autobot_background extends Service {
                     Play_Service_Clear();
                     Thread.sleep(delay);
                     wifi_on();
-                    Thread.sleep(10000);
+                    Thread.sleep(18000);
                     Google_Account_Create();
                     Thread.sleep(delay);
                     wifi_off();
@@ -158,7 +158,7 @@ public class autobot_background extends Service {
 
             cmd = "/system/bin/am start -a android.settings.ADD_ACCOUNT_SETTINGS\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(6000);
 
             //google
             cmd = "/system/bin/input tap 248 246\n";
@@ -230,7 +230,7 @@ public class autobot_background extends Service {
             //web next
             cmd = "/system/bin/input tap 388 715\n";
             os.writeBytes(cmd);
-            Thread.sleep(10000);
+            Thread.sleep(15000);
 
 //            gmail_addr
             cmd = "/system/bin/input tap 61 638\n";
@@ -285,10 +285,13 @@ public class autobot_background extends Service {
             //swipe down
             cmd = "/system/bin/input swipe 261 795 261 581 50\n";
             os.writeBytes(cmd);
-            Thread.sleep(200);
+            Thread.sleep(100);
             cmd = "/system/bin/input swipe 261 795 261 581 50\n";
             os.writeBytes(cmd);
-            Thread.sleep(200);
+            Thread.sleep(100);
+            cmd = "/system/bin/input swipe 261 795 261 581 50\n";
+            os.writeBytes(cmd);
+            Thread.sleep(100);
 
             //i_agree
             cmd = "/system/bin/input tap 368 698\n";
@@ -357,12 +360,12 @@ public class autobot_background extends Service {
         try {
             String cmd = "/system/bin/monkey -p com.rungetel.ghostphone 1\n";
             os.writeBytes(cmd);
-            Thread.sleep(4000);
+            Thread.sleep(5000);
 
 //            gfs ID
             cmd = "/system/bin/input tap 343 183\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(1000);
             //+ first click
             cmd = "/system/bin/input tap 406 646\n";
             os.writeBytes(cmd);
@@ -370,7 +373,7 @@ public class autobot_background extends Service {
             //+ second click
             cmd = "/system/bin/input tap 396 724\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(1000);
             //SHUFFLE first click
             cmd = "/system/bin/input tap 216 648\n";
             os.writeBytes(cmd);
@@ -379,22 +382,22 @@ public class autobot_background extends Service {
             //SHUFFLE SECOND click
             cmd = "/system/bin/input tap 218 740\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(2000);
 
             cmd = "/system/bin/input tap 316 663\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(500);
 
 
 
             cmd = "/system/bin/input tap 379 518\n";
             os.writeBytes(cmd);
-            Thread.sleep(15000);
+            Thread.sleep(10000);
 
 //            mac change
             cmd = "/system/bin/input tap 242 182\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(1500);
 
             cmd = "/system/bin/input tap 397 392\n";
             os.writeBytes(cmd);
@@ -402,11 +405,11 @@ public class autobot_background extends Service {
 
             cmd = "/system/bin/input tap 227 388\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(2000);
 
             cmd = "/system/bin/input tap 309 393\n";
             os.writeBytes(cmd);
-            Thread.sleep(delay);
+            Thread.sleep(2000);
 
             cmd = "/system/bin/input tap 385 510\n";
             os.writeBytes(cmd);
@@ -429,27 +432,27 @@ public class autobot_background extends Service {
     public void ChamelPhon(){
 
         try {
-            String cmd = "/system/bin/monkey -p com.cryptotel.chamelephon 1\n";
+            String cmd = "/system/bin/am force-stop com.cryptotel.chamelephon\n";
+            os.writeBytes(cmd);
+            Thread.sleep(delay);
+
+
+            cmd = "/system/bin/monkey -p com.cryptotel.chamelephon 1\n";
             os.writeBytes(cmd);
             Thread.sleep(4000);
 
             cmd = "/system/bin/input tap 282 557\n";
             os.writeBytes(cmd);
-            Thread.sleep(1000);
+            Thread.sleep(700);
 
             cmd = "/system/bin/input tap 262 636\n";
             os.writeBytes(cmd);
-            Thread.sleep(1000);
+            Thread.sleep(700);
 
             cmd = "/system/bin/input tap 177 490\n";
             os.writeBytes(cmd);
-            Thread.sleep(8000);
+            Thread.sleep(1000);
 
-
-            cmd = "/system/bin/am force-stop com.cryptotel.chamelephon\n";
-            os.writeBytes(cmd);
-
-            Thread.sleep(delay);
 
         }catch (IOException | InterruptedException e){
             e.printStackTrace();
@@ -471,18 +474,18 @@ public class autobot_background extends Service {
 
         cmd = "/system/bin/input tap 377 452\n";
         os.writeBytes(cmd);
-        Thread.sleep(1000);
+        Thread.sleep(500);
 
 
         cmd = "/system/bin/input tap 157 751\n";
         os.writeBytes(cmd);
-        Thread.sleep(1000);
+        Thread.sleep(500);
 
 
         cmd = "/system/bin/am force-stop com.makeinfo.androididchanger\n";
         os.writeBytes(cmd);
 
-        Thread.sleep(1000);
+        Thread.sleep(300);
 
 
         }catch (IOException | InterruptedException e){
@@ -510,21 +513,6 @@ public class autobot_background extends Service {
             Thread.sleep(200);
         }
         catch (IOException | InterruptedException e){}
-    }
-
-
-    public void clearAccounts() {
-        AccountManager manager = AccountManager.get(getApplicationContext());
-        AuthenticatorDescription[] authTypes = manager.getAuthenticatorTypes();
-        for (AuthenticatorDescription authDesc : authTypes) {
-            Account[] accounts = manager.getAccountsByType(authDesc.type);
-            if (accounts.length == 0) {
-                continue;  // No accounts of this type, continue loop.
-            }
-            for (final Account account : accounts) {
-                manager.removeAccount(account, null, null, null);
-            }
-        }
     }
 
 

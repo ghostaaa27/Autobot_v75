@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private CardView guide_to_use_cv;
+    private CardView stop_button;
     private CardView my_auto_tast;
 
 
@@ -36,12 +36,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         my_auto_tast = (CardView) findViewById(R.id.my_auto_tast_id);
+        stop_button = (CardView) findViewById(R.id.stop_cv_id);
 
         my_auto_tast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startService(new Intent(getApplication(), autobot_background.class));
-//                stopService(new Intent(getApplication(), autobot_background.class));
+            }
+        });
+
+        stop_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopService(new Intent(getApplication(), autobot_background.class));
             }
         });
     }

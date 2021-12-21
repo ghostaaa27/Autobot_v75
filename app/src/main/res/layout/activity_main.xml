@@ -20,44 +20,47 @@
             android:orientation="vertical">
 
 <!--            for use guide-->
+
+
+
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/guide_to_use_cv_id"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginTop="20dp"
+                android:id="@+id/stop_cv_id"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="15dp">
+                android:foreground="?android:attr/selectableItemBackground">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/Deeporange"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@color/Darkgray"
                     android:padding="10dp">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Guide to use"
-                        android:textColor="#ffff"
+                        android:text="Stop Task"
                         android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:textColor="#ffff"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="50dp"
-                        android:text="click here to see full guide for using this app"
+                        android:layout_marginTop="80dp"
+                        android:text="Create your own tasks"
                         android:textColor="#ffff"/>
 
                 </RelativeLayout>
 
-
             </androidx.cardview.widget.CardView>
-
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/my_auto_tast_id"
@@ -95,39 +98,41 @@
 
             </androidx.cardview.widget.CardView>
 
-
             <androidx.cardview.widget.CardView
+                android:id="@+id/guide_to_use_cv_id"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                app:cardCornerRadius="15dp"
                 android:layout_marginTop="20dp"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="15dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/Darkgray"
+                    android:background="@color/Deeporange"
                     android:padding="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Create New Auto Input Tasks"
-                        android:textSize="30sp"
-                        android:textColor="#ffff"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="10dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="80dp"
-                        android:text="Create your own tasks"
+                        android:layout_marginTop="10dp"
+                        android:text="Guide to use"
+                        android:textColor="#ffff"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="50dp"
+                        android:text="click here to see full guide for using this app"
                         android:textColor="#ffff"/>
 
                 </RelativeLayout>
+
 
             </androidx.cardview.widget.CardView>
 
